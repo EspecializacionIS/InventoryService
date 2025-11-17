@@ -1,8 +1,8 @@
 package com.inventoryService.inventoryService.infraestructure.adapters.out.persistence.entity;
 
 
+import com.inventoryService.inventoryService.domain.model.InventoryItem;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

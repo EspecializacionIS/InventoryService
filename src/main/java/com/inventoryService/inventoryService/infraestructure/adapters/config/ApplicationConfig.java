@@ -5,6 +5,7 @@ import com.inventoryService.inventoryService.application.useCase.InventoryUseCas
 import com.inventoryService.inventoryService.domain.port.in.InventoryUseCase;
 import com.inventoryService.inventoryService.domain.port.out.InventoryRepositoryPort;
 import com.inventoryService.inventoryService.infraestructure.adapters.out.persistence.entity.JpaInventoryItemRepository;
+import com.inventoryService.inventoryService.infraestructure.adapters.out.persistence.entity.JpaInventoryRepositoryPortImpl;
 import org.springframework.context.annotation.Bean;
 
 public class ApplicationConfig {
@@ -16,6 +17,12 @@ public class ApplicationConfig {
         return new InventoryService(
                 new InventoryUseCaseImpl(inventoryRepositoryPort)
         );
+    }
+
+    @Bean
+    public InventoryRepositoryPort inventoryRepositoryPort(JpaInventoryRepositoryPortImpl jpaInventoryItemRepository)   {
+
+        return jpaInventoryItemRepository;
     }
 
 

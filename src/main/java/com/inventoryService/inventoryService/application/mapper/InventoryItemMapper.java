@@ -1,4 +1,4 @@
-package com.inventoryService.inventoryService.application.service;
+package com.inventoryService.inventoryService.application.mapper;
 
 
 import com.inventoryService.inventoryService.domain.model.InventoryItem;

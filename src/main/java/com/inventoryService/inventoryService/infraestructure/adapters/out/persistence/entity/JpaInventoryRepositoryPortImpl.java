@@ -1,6 +1,6 @@
 package com.inventoryService.inventoryService.infraestructure.adapters.out.persistence.entity;
 
-import com.inventoryService.inventoryService.application.service.InventoryItemMapper;
+import com.inventoryService.inventoryService.application.mapper.InventoryItemMapper;
 import com.inventoryService.inventoryService.domain.model.InventoryItem;
 import com.inventoryService.inventoryService.domain.port.out.InventoryRepositoryPort;
 import lombok.RequiredArgsConstructor;
@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
-public class InventoryRepositoryPortImpl implements InventoryRepositoryPort {
+public class JpaInventoryRepositoryPortImpl implements InventoryRepositoryPort {
 
     private final JpaInventoryItemRepository jpaRepo;
     private final InventoryItemMapper mapper;
